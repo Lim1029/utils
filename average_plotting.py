@@ -1,7 +1,6 @@
 # this codes plot the average spectrum of raw cube and show the masking window additionally the average corrected spectrum, and baseline can be plotted
 # masking using signal to noise ratio threshold is also an option.
 # last updated: 8 may 2026
-dsd
 
 import numpy as np
 import matplotlib.pyplot as plt
