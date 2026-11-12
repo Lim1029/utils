@@ -19,6 +19,7 @@ def single_gaussian_fit(x,y,a0,v0,w0):
         print(f"Fitting Failed: {e}")
 
 def single_gaussian_fit_autoinit(x,y):
+    NAN4 = (np.nan, np.nan, np.nan, np.nan)
     # estimate the initial parameters
     # v0 = moment1
     # w0 = moment2
@@ -46,3 +47,4 @@ def single_gaussian_fit_autoinit(x,y):
         return a_fit, v_fit, w_fit, area
     except Exception as e:
         print(f"Fitting Failed: {e}")
+        return NAN4

@@ -1,4 +1,5 @@
-from codes.cube_rms_estimate import rms_negative
+# from codes.cube_rms_estimate import rms_negative
+from cube_rms_estimate import rms_negative
 import numpy as np
 
 # this mask is to make any PIXEL with snr < threshold become nan
