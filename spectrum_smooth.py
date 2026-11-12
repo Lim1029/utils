@@ -30,3 +30,14 @@ def spectrum_smooth(spectrum, spectral_axis, target_resolution, resample=True):
     else:
         new_spectrum = smoothed_spectrum
     return new_spectrum
+
+
+def spectrum_smooth_kernel(spectrum, spectral_axis, kernel_size):
+    if spectral_axis[1]-spectral_axis[0] < 0: # to account for reverse spectral axis issue, like IRAM cube
+        input_spec = Spectrum1D(spectral_axis=spectral_axis[::-1]*(u.km/u.s), flux=spectrum[::-1]*u.K)
+    else:
+        input_spec = Spectrum1D(spectral_axis=spectral_axis*(u.km/u.s), flux=spectrum*u.K)
+    
+    spec1_gsmooth = gaussian_smooth(input_spec, stddev=kernel_size)
+#    breakpoint()
+    return spec1_gsmooth.flux.value
