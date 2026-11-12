@@ -6,8 +6,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import astropy.units as u
 
-from codes.utils.cube_mask import cube_mask
-from codes.utils.spectrum_smooth import spectrum_smooth
+from utils.cube_mask import cube_mask
+from utils.spectrum_smooth import spectrum_smooth
 
 def average_plotting(cube, corrected=None, window=None, baseline=None, snr_threshold=0):
 

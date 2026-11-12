@@ -1,5 +1,5 @@
 import astropy.units as u
-from codes.utils.cube_mask import cube_mask, cube_mask_channel
+from utils.cube_mask import cube_mask, cube_mask_channel
 import numpy as np
 from spectral_cube import SpectralCube
 import matplotlib.pyplot as plt
